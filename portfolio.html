@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+        background-color: #f8f8f8; /* Ganti dengan warna latar belakang yang Anda sukai */
+        color: #333; /* Ganti dengan warna teks yang sesuai */
+        font-family: 'Arial', sans-serif; /* Ganti dengan jenis huruf yang diinginkan */
+    }
+
+    h2 {
+        color: #0066cc; /* Ganti dengan warna yang sesuai */
+    }
+
+    h3 {
+        color: #009933; /* Ganti dengan warna yang sesuai */
+    }
+
+    .text-caption {
+        margin-left: 2%; /* Berikan jarak kiri untuk meningkatkan keterbacaan */
+    }
+
+    .portfolio-image,
+    .portfolio-image-tracking {
+        width: 100%;
+        max-width: 100%; /* Agar gambar tidak melebihi lebar aslinya */
+        height: auto;
+    }
+
+    .portfolio-image-caption {
+        border-bottom: 1px solid #ddd; /* Garis batas antara setiap portofolio */
+        padding-bottom: 20px; /* Berikan ruang di bagian bawah setiap portofolio */
+    }
+
+    /* Tampilan mobile (maksimum 768px) */
+    @media (max-width: 768px) {
+        .portfolio-image-caption {
+            /* display: flex; */
+            flex-direction: column; /* Gambar di atas teks */
+        }
+
+        .portfolio-image {
+            width: 100%; /* Mengisi lebar layar */
+            max-height: 200px; /* Menjaga aspek gambar */
+        }
+
+        .portfolio-image-tracking {
+            width: 100%; /* Mengisi lebar layar */
+            max-height: auto; /* Menjaga aspek gambar */
+        }
+        
+        .text-caption {
+            margin-left: 0; /* Reset jarak kiri */
+        }
+    }
+
+    /* Tampilan lebih besar dari 768px */
+    @media (min-width: 769px) {
+        .portfolio-image-caption {
+            display: flex;
+            flex-direction: row; /* Gambar dan teks sejajar */
+        }
+
+        .portfolio-image {
+            width: 50%; /* Setengah lebar */
+            padding-right: 5%;
+        }
+
+        .portfolio-image-tracking {
+            width: 50%; /* Setengah lebar */
+            padding-right: 5%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <section id="portfolio">
+    <h2>Portofolio</h2>
+    <div class="portfolio-image-caption">
+        <img src="images/alert-mikrotik.jpg" alt="Image 1" class="portfolio-image" height="600">
+        <div class="text-caption">
+            <h3>Tugas Akhir SMK ~ Monitoring Resource Network</h3>
+            <ol>
+                <li>Tujuan Tugas Akhir</li>
+                <ul>
+                    <li>Memonitoring kesehatan router</li>
+                    <li>Melihat apakah traffic internet tinggi atau tidak</li>
+                </ul>
+
+                <li>Alat dan Bahan</li>
+                <ul>
+                    <li>Winbox</li>
+                    <li>Grafana</li>
+                    <li>Prometheus</li>
+                    <li>SNMP Exporter</li>
+                    <li>Virtualbox</li>
+                    <li>Router Mikrotik</li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="portfolio-image-caption">
+        <img src="images/tracking.png" alt="Image 2" class="portfolio-image-tracking">
+        <div class="text-caption">
+            <h3>Tugas Akhir SMK ~ Monitoring Resource Network</h3>
+            <ol>
+                <li>Tujuan Tugas Akhir</li>
+                <ul>
+                    <li>Memonitoring kesehatan router</li>
+                    <li>Melihat apakah traffic internet tinggi atau tidak</li>
+                </ul>
+
+                <li>Alat dan Bahan</li>
+                <ul>
+                    <li>Winbox</li>
+                    <li>Grafana</li>
+                    <li>Prometheus</li>
+                    <li>SNMP Exporter</li>
+                    <li>Virtualbox</li>
+                    <li>Router Mikrotik</li>
+                </ul>
+            </ol>
+        </div>
+    </div>
+</section>
+</body>
+</html>

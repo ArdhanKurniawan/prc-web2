@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      background-color: #ddd;
+      margin-bottom: 2px;
+      transition: background-color 0.3s;
+    }
+
+    li a:hover {
+      background-color: #555;
+      color: #fff;
+    }
+
+    main {
+      display: grid;
+      grid-template-rows: 5% 90% 5%;
+      /* grid-template-rows: 10% 30% 40% 20%; */
+    }
+
+    frameset {
+        border-right: 1px solid #ddd; /* Ganti dengan warna yang sesuai */
+    }
+
+    frameset, frame {
+        margin: 0;
+        padding: 0;
+    }
+
+    frame[name="footer"] {
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        grid-template-columns: 100%; /* Mengubah ke satu kolom saat layar kecil */
+      }
+
+      /* frameset {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      frame {
+        width: 100%;
+        height: auto;
+      } */
+    }
+  </style>
+</head>
+
+<frameset cols="30%, 70%">
+  <frame src="sidebar.html" name="sidebar" scrolling="auto" noresize="noresize">
+  <frameset rows="5%, *, 24%">
+    <frame src="header.html" name="header" scrolling="no" noresize="noresize">
+    <frame src="data_diri.html" name="content" scrolling="auto" noresize="noresize">
+    <frame src="footer.html" name="footer" scrolling="no" noresize></frame>
+  </frameset>
+</frameset>
+
+</html>
