@@ -119,7 +119,7 @@
             var isEmpty = false;
     
             inputs.forEach(function(input) {
-                if (formData.get(input.name).trim() === '') {
+                if (formData.get(input.name).trim() == '') {
                     isEmpty = true;
                     return; // Keluar dari loop jika ada input yang kosong
                 }
