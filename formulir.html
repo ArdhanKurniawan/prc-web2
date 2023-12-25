@@ -109,14 +109,31 @@
             });
             return JSON.stringify(jsonObject);
         }
-
+    
         function sendData() {
             var form = document.getElementById('myForm');
             var formData = new FormData(form);
-
+    
+            // Memeriksa setiap elemen input dalam form
+            var inputs = form.querySelectorAll('input, textarea, select');
+            var isEmpty = false;
+    
+            inputs.forEach(function(input) {
+                if (input.value.trim() === '') {
+                    isEmpty = true;
+                    return; // Keluar dari loop jika ada input yang kosong
+                }
+            });
+    
+            // Menampilkan peringatan jika ada input yang kosong
+            if (isEmpty) {
+                alert('Woy cuk, isi sek sing lengkap lah cuk');
+                return;
+            }
+    
             var jsonData = formDataToJSON(formData);
             alert(jsonData);
         }
-    </script>
+    </script>    
 </body>
 </html>
